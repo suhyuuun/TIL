@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>이미지 지도에 마커 표시하기</title>
+    <title>상세페이지 지도</title>
     
 </head>
 <body>
