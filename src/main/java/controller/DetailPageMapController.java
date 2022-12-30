@@ -11,22 +11,27 @@ import dto.DetailPageMapDTO;
 import service.DetailPageMapService;
 
 //http://localhost:8090/myapp/detailPage.do
-
+//http://localhost:8090/myapp/detailPageMap.do
 @Controller
 public class DetailPageMapController {
-	private DetailPageMapService service;
-	
-	public DetailPageMapController() {
-
-	}
-	
-	public void setService(DetailPageMapService service) {
-		this.service = service;
-	}
+//	private DetailPageMapService service;
+//	
+//	public DetailPageMapController() {
+//
+//	}
+//	
+//	public void setService(DetailPageMapService service) {
+//		this.service = service;
+//	}
 
 	@RequestMapping(value="/detailPage.do")
 	public String detailPageForm() {
 		return "detailPage";
+	}
+	
+	@RequestMapping(value="/detailPageMap.do")
+	public String detailPageMapForm() {
+		return "detailPageMap";
 	}
 	
 //	@RequestMapping(value="/detailPage.do", method=RequestMethod.POST)
