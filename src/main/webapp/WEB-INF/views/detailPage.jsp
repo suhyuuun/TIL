@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,11 @@
 <title>상세페이지전 리스트페이지</title>
 </head>
 <body>
-	<a href="detailPageMap.do?x=33.450701&y=126.570667">전환마을 부엌밥풀꽃</a>
+	<c:forEach items="${mList}" var="dto">
+		<c:url var="path" value=detailPageMap.do>
+			<c:param name="lat" value="${dto.latitude}" />
+			<c:param name="lng" value="${dto.longitude}" />
+		</c:url>
+	</c:forEach>
 </body>
 </html>

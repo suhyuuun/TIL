@@ -21,7 +21,7 @@ public class DetailPageMapDaoImp implements DetailPageMapDao {
 
 	@Override
 	public List<DetailPageMapDTO> coordinate(HashMap<String, Object> data) {
-		return null;
+		return sqlSession.selectList("res_test.res_coordindate",data);
 	}
 
 }
