@@ -1,21 +1,15 @@
-drop  table libmap;
+drop  table res_test;
 
-create table libmap(
-mart varchar2(2000),
-p_num varchar2(2000),
-area varchar2(2000),
-address varchar2(2000),
+create table res_test(
+res varchar2(2000),
 latitude varchar2(2000),
-longitude varchar2(2000));
+longitude varchar2(2000),
+keyword varchar2(2000));
 
 
 
-insert into libmap values('서울 도서관','02-2122-0300','서울','서울 중구 세종로 110','37.566134','126.977808');
-insert into libmap values('지혜의 숲','031-711-8905','경기','경기도 성남시 분당구 금곡동 206','37.386396','127.101900');
+insert into res_test values('전환마을 부엌밥풀꽃','126.9160994','37.6106947', '전환마을');
+insert into res_test values('본도시락 보라매점','126.9251715','37.4995991', '본도시락');
 commit;
 
-select count(*) from libmap where area='서울';
-
-delete from libmap where p_num=2;
-
-SELECT  * FROM libmap;
+SELECT  * FROM res_test;

@@ -29,16 +29,16 @@ public class DetailPageMapController {
 		return "detailPage";
 	}
 	
-	@RequestMapping(value="/detailPage.do", method=RequestMethod.POST)
-	public ModelAndView detailPageMap(String latitude, String longitude, String data, ModelAndView mav) {
-		List<DetailPageMapDTO> mList = service.f_coordinate(data, latitude, longitude);
-		mav.addObject("mList",mList);
-		mav.addObject("latitude",latitude);
-		mav.addObject("longitude",longitude);
-		mav.setViewName("detailPageMap.do?x=" + latitude + "y=" + longitude);
-		return mav;
-	}
-	
+//	@RequestMapping(value="/detailPage.do", method=RequestMethod.POST)
+//	public ModelAndView detailPageMap(String latitude, String longitude, String data, ModelAndView mav) {
+//		List<DetailPageMapDTO> mList = service.f_coordinate(data, latitude, longitude);
+//		mav.addObject("mList",mList);
+//		mav.addObject("latitude",latitude);
+//		mav.addObject("longitude",longitude);
+//		mav.setViewName("detailPageMap.do?x=" + latitude + "y=" + longitude);
+//		return mav;
+//	}
+//	
 	
 	
 	

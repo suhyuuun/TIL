@@ -1,22 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>버튼</title>
+<title>반경1km 지도</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12231aee9abe11c18052c9da5753ed7e&libraries=services"></script>
 </head>
 <body>
-	<c:forEach items="${res_test}" var="dto">
-		<p>
-			<a href="detailPageMap.do?x=${dto.latitude}&y=${dto.longitude}" data-value="전환마을 부엌밥풀꽃">전환마을
-				부엌밥풀꽃</a>
-		</p>
-		<p>
-			<a href="detailPageMap.do?x=${dto.latitude}&y=${dto.longitude}" data-value="본도시락 보라매점">본도시락
-				보라매점</a>
-		</p>
-	</c:forEach>
+	<div id="map" style="width: 100%; height: 350px;"></div>
+	<script src="map/nearby1kmMap.js"></script>
 </body>
 </html>
