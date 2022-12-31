@@ -14,15 +14,15 @@ import service.DetailPageMapService;
 //http://localhost:8090/myapp/detailPageMap.do
 @Controller
 public class DetailPageMapController {
-	private DetailPageMapService service;
-	
-	public DetailPageMapController() {
-
-	}
-	
-	public void setService(DetailPageMapService service) {
-		this.service = service;
-	}
+//	private DetailPageMapService service;
+//	
+//	public DetailPageMapController() {
+//
+//	}
+//	
+//	public void setService(DetailPageMapService service) {
+//		this.service = service;
+//	}
 
 	@RequestMapping(value="/detailPage.do")
 	public String detailPageForm() {
@@ -34,23 +34,24 @@ public class DetailPageMapController {
 //		return "detailPageMap";
 //	}
 	
-	@RequestMapping(value="/detailPage.do", method=RequestMethod.POST)
-	public ModelAndView detailPageMap(String latitude, String longitude, String data, ModelAndView mav) {
-		List<DetailPageMapDTO> mList = service.f_coordinate(data, latitude, longitude);
-		mav.addObject("mList",mList);
-		mav.addObject("latitude",latitude);
-		mav.addObject("longitude",longitude);
-		mav.setViewName("detailPageMap.do?lat=" + latitude + "lng=" + longitude);
-		return mav;
-	}
-	
-	
-	
-	
-//	@RequestMapping(value="/detailPageMap.do", method=RequestMethod.POST)
-//	public ModelAndView detailMap(String res, String latitude, String longtitude, ModelAndView mav) {
-//	mav.addObject("")
-//		return  mav;
+//	@RequestMapping(value="/detailPage.do", method=RequestMethod.POST)
+//	public ModelAndView detailPageMap(String latitude, String longitude, String data, ModelAndView mav) {
+//		List<DetailPageMapDTO> mList = service.f_coordinate(data, latitude, longitude);
+//		mav.addObject("mList",mList);
+//		mav.addObject("latitude",latitude);
+//		mav.addObject("longitude",longitude);
+//		mav.setViewName("detailPageMap.do?lat=" + latitude + "lng=" + longitude);
+//		return mav;
 //	}
+	
+	
+	@RequestMapping(value="/detailPageMap.do", method=RequestMethod.POST)
+	public ModelAndView detailMap(String lat, String lng, ModelAndView mav) {
+		System.out.println("lat :" + lat + "lng : " + lng);
+		mav.addObject("lat",lat);
+		mav.addObject("lng",lng);
+		mav.setViewName("jsonView");
+		return  mav;
+	}
 
 }
