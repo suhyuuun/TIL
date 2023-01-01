@@ -5,7 +5,8 @@
 
 <mapper namespace="res_test">
 	<select id="res_coordinate" parameterType="java.util.HashMap" resultType="dto.DetailPageMapDTO">
-	   SELECT latitude, longitude FROM res_test
+	   SELECT latitude, longitude 
+	   FROM res_test
 	   WHERE res LIKE '%' || #{data} || '%'
 	</select>
 </mapper>   
