@@ -11,10 +11,6 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=85e3a2b784700813659ca3ae8da46d29"></script>
 </head>
 <body>
-<%-- 	<c:url var="path" value="detailPageMap.do"> --%>
-<%-- 		<c:param name="lat" value="37.6106947" /> --%>
-<%-- 		<c:param name="lng" value="126.9160994" /> --%>
-<%-- 	</c:url> --%>
 <input type="button" onclick="button1_click();" value="버튼1" />
 <!-- 이미지 지도를 표시할 div 입니다 -->
 <div id="staticMap" style="width:600px;height:350px;"></div>    
