@@ -17,8 +17,7 @@
 <script>
 
 function button1_click(){	
-//	window.location.href = "http://localhost:8090/myapp/detailPageMap.do";
-	coordinate("37.6106947", "126.9160994");
+	coordinate(${dto.latitude}, ${dto.longitude});
 }
 
 
@@ -35,7 +34,7 @@ function coordinate(lat, lng){
 		success : function(result) {
 			var lat = result.lat;
 			var lng = result.lng;
-			console.log("lat: "+ lat + "lng: " + lng);
+// 			console.log("lat: "+ lat + "lng: " + lng);
 			marker(lat,lng);
 		},
 		error : function(error) {

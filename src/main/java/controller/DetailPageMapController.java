@@ -47,7 +47,7 @@ public class DetailPageMapController {
 	
 	@RequestMapping(value="/detailPageMap.do", method=RequestMethod.POST)
 	public ModelAndView detailMap(String lat, String lng, ModelAndView mav) {
-		System.out.println("lat :" + lat + "lng : " + lng);
+//		System.out.println("lat :" + lat + "lng : " + lng);
 		mav.addObject("lat",lat);
 		mav.addObject("lng",lng);
 		mav.setViewName("jsonView");

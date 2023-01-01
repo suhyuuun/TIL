@@ -18,11 +18,10 @@ public class DetailPageMapServiceImp  implements DetailPageMapService{
 	}
 
 	@Override
-	public List<DetailPageMapDTO> f_coordinate(String res, String latitude, String longtitude) {
+	public List<DetailPageMapDTO> f_coordinate(String latitude, String longtitude) {
 		HashMap<String, Object> coordinate = new HashMap<String, Object>();
 		coordinate.put("latitude", latitude);
 		coordinate.put("longtitude", longtitude);
-		coordinate.put("data", res);
 		return dao.coordinate(coordinate);
 	}	
 	
