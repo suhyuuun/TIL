@@ -22,7 +22,17 @@ public class DetailPageMapServiceImp  implements DetailPageMapService{
 		HashMap<String, Object> coordinate = new HashMap<String, Object>();
 		coordinate.put("latitude", latitude);
 		coordinate.put("longtitude", longtitude);
-		return dao.coordinate(coordinate);
-	}	
+		return dao.res_coordinate(coordinate);
+	}
+
+	@Override
+	public List<DetailPageMapDTO> res_all(String res, String latitude, String longitude) {
+		HashMap<String, Object> res_all = new HashMap<String, Object>();
+		res_all.put("res", res);
+		res_all.put("latitude", latitude);
+		res_all.put("longitude", longitude);
+		return dao.res_all(res_all);
+	}
+
 	
 }

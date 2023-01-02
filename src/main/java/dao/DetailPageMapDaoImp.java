@@ -20,8 +20,14 @@ public class DetailPageMapDaoImp implements DetailPageMapDao {
 	}
 
 	@Override
-	public List<DetailPageMapDTO> coordinate(HashMap<String, Object> coor) {
+	public List<DetailPageMapDTO> res_coordinate(HashMap<String, Object> coor) {
 		return sqlSession.selectList("res_test.res_coordindate",coor);
 	}
+
+	@Override
+	public List<DetailPageMapDTO> res_all(HashMap<String, Object> all) {
+		return sqlSession.selectList("res_test.res_all",all);
+	}
+
 
 }
