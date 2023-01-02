@@ -17,7 +17,7 @@
 	<div id="staticMap" style="width: 600px; height: 350px;"></div>
 	<script>
 		function button_click() {
-			coordinate('${dto[1].latitude}', '${dto[1].longitude}');
+			coordinate('37.48837454', '126.9913941');
 		}
 
 		function coordinate(lat, lng) {
